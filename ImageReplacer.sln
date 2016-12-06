@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchForImageFiles", "Modu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigureReplacementImage", "Modules\ConfigureReplacementImage\ConfigureReplacementImage.csproj", "{70AF1445-D789-4E33-81F2-979AACD96A00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcessing", "ImageProcessing\ImageProcessing.csproj", "{71DFD0DF-41E0-40EA-A14F-65785AD8D405}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcessing", "Business\ImageProcessing\ImageProcessing.csproj", "{71DFD0DF-41E0-40EA-A14F-65785AD8D405}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
