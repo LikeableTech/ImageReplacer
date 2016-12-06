@@ -2,6 +2,7 @@
 using Prism.Unity;
 using ImageReplacer.Views;
 using System.Windows;
+using Prism.Modularity;
 
 namespace ImageReplacer
 {
@@ -14,7 +15,17 @@ namespace ImageReplacer
 
         protected override void InitializeShell()
         {
+            base.InitializeShell();
+
+            Application.Current.MainWindow = (Window) Shell;
             Application.Current.MainWindow.Show();
+        }
+        protected override IModuleCatalog CreateModuleCatalog()
+        {
+            var catalog = new ModuleCatalog();
+            catalog.AddModule(typeof(SearchForImageFiles.Module));
+            catalog.AddModule(typeof(ConfigureReplacementImage.Module));
+            return catalog;
         }
     }
 }
