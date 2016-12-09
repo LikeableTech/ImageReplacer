@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageReplacer.Infrastructur
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{7408DF8C-497E-42D2-B836-A19B0DEBA2A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchForImageFiles", "Modules\SearchFiles\SearchForImageFiles.csproj", "{ADD15406-A78B-41C8-85E1-9F7666937DA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageFileSelection", "Modules\SearchFiles\ImageFileSelection.csproj", "{ADD15406-A78B-41C8-85E1-9F7666937DA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigureReplacementImage", "Modules\ConfigureReplacementImage\ConfigureReplacementImage.csproj", "{70AF1445-D789-4E33-81F2-979AACD96A00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplacementImage", "Modules\ConfigureReplacementImage\ReplacementImage.csproj", "{70AF1445-D789-4E33-81F2-979AACD96A00}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcessing", "Business\ImageProcessing\ImageProcessing.csproj", "{71DFD0DF-41E0-40EA-A14F-65785AD8D405}"
 EndProject

@@ -23,8 +23,8 @@ namespace ImageReplacer
         protected override IModuleCatalog CreateModuleCatalog()
         {
             var catalog = new ModuleCatalog();
-            catalog.AddModule(typeof(SearchForImageFiles.Module));
-            catalog.AddModule(typeof(ConfigureReplacementImage.Module));
+            catalog.AddModule(typeof(ImageFileSelection.Module));
+            catalog.AddModule(typeof(ReplacementImage.Module));
             return catalog;
         }
     }

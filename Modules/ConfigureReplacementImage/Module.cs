@@ -2,7 +2,7 @@
 using Prism.Regions;
 using System;
 
-namespace ConfigureReplacementImage
+namespace ReplacementImage
 {
     public class Module : IModule
     {

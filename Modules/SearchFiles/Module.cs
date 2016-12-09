@@ -3,7 +3,7 @@ using Prism.Modularity;
 using Prism.Regions;
 using System;
 
-namespace SearchForImageFiles
+namespace ImageFileSelection
 {
     public class Module : IModule
     {
