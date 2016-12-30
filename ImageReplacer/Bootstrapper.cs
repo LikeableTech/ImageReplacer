@@ -6,6 +6,8 @@ using Prism.Modularity;
 
 namespace ImageReplacer
 {
+    using System;
+
     class Bootstrapper : UnityBootstrapper
     {
         protected override DependencyObject CreateShell()
@@ -23,9 +25,14 @@ namespace ImageReplacer
         protected override IModuleCatalog CreateModuleCatalog()
         {
             var catalog = new ModuleCatalog();
-            catalog.AddModule(typeof(ImageFileSelection.Module));
-            catalog.AddModule(typeof(ReplacementImage.Module));
+            this.AddModuleTypeToCatalog(typeof(ImageFileSelection.Module), catalog);
+            this.AddModuleTypeToCatalog(typeof(ReplacementImage.Module), catalog);
             return catalog;
+        }
+
+        private void AddModuleTypeToCatalog(Type moduleType, IModuleCatalog catalog)
+        {
+            catalog.AddModule(new ModuleInfo(moduleType.AssemblyQualifiedName, moduleType.AssemblyQualifiedName));
         }
     }
 }

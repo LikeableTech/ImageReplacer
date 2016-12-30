@@ -139,7 +139,7 @@
       <Project>{70af1445-d789-4e33-81f2-979aacd96a00}</Project>
       <Name>ReplacementImage</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Modules\SearchFiles\ImageFileSelection.csproj">
+    <ProjectReference Include="..\Modules\ImageFileSelection\ImageFileSelection.csproj">
       <Project>{add15406-a78b-41c8-85e1-9f7666937da7}</Project>
       <Name>ImageFileSelection</Name>
     </ProjectReference>

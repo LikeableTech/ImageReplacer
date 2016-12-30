@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SearchFilesModule.Properties
+namespace ImageFileSelectionModule.Properties
 {
 
 

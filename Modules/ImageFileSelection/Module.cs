@@ -10,6 +10,15 @@ namespace ImageFileSelection
         private IRegionManager _regionManager;
         private IUnityContainer _container;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Module"/> class.
+        /// </summary>
+        /// <param name="regionManager">
+        /// The region manager.
+        /// </param>
+        /// <param name="container">
+        /// The container.
+        /// </param>
         public Module(IRegionManager regionManager, IUnityContainer container)
         {
             _regionManager = regionManager;
@@ -18,7 +27,7 @@ namespace ImageFileSelection
 
         public void Initialize()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }
