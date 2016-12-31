@@ -4,12 +4,16 @@
         xmlns:prism="http://prismlibrary.com/"
         xmlns:inf="clr-namespace:ImageReplacer.Infrastructure;assembly=ImageReplacer.Infrastructure"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="{Binding Title}" Height="350" Width="525">
-    <StackPanel Orientation="Horizontal">
-        <StackPanel>
-            <ContentControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.ToolbarRegion}" />
-            <ContentControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.ContentRegion}" />
-        </StackPanel>
-        <ContentControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.PropertiesRegion}" />
-    </StackPanel>
+        Title="{Binding Title}" Height="550" Width="725"
+        AllowsTransparency="True" Background="Transparent"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen" >
+    <DockPanel Background="MidnightBlue">
+        <ContentControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.ToolbarRegion}" DockPanel.Dock="Top" />
+        <DockPanel DockPanel.Dock="Bottom">
+            <ContentControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.PropertiesRegion}" DockPanel.Dock="Right" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.ContentRegion}" DockPanel.Dock="Left" />
+        </DockPanel>
+    </DockPanel>
 </Window>

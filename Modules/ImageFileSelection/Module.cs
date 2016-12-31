@@ -5,6 +5,11 @@ using System;
 
 namespace ImageFileSelection
 {
+    using ImageFileSelection.ViewModels;
+    using ImageFileSelection.Views;
+
+    using ImageReplacer.Infrastructure;
+
     public class Module : IModule
     {
         private IRegionManager _regionManager;
@@ -25,9 +30,24 @@ namespace ImageFileSelection
             _container = container;
         }
 
+        /// <summary>
+        /// The initialize.
+        /// </summary>
         public void Initialize()
         {
-            //throw new NotImplementedException();
+            _container.RegisterType<ISelectionContentView, SelectionContent>();
+            _container.RegisterType<ISelectionToolbarView, SelectionToolbar>();
+            _container.RegisterType<ISelectionPropertiesView, SelectionProperties>();
+
+            _container.RegisterType<ISelectionContentViewModel, SelectionContentViewModel>();
+            _container.RegisterType<ISelectionToolbarViewModel, SelectionToolbarViewModel>();
+            _container.RegisterType<ISelectionPropertiesViewModel, SelectionPropertiesViewModel>();
+
+            _regionManager.RegisterViewWithRegion(RegionNames.ContentRegion, () => _container.Resolve<ISelectionContentView>());
+            _regionManager.RegisterViewWithRegion(RegionNames.ToolbarRegion, () => _container.Resolve<ISelectionToolbarView>());
+            _regionManager.RegisterViewWithRegion(RegionNames.PropertiesRegion, () => _container.Resolve<ISelectionPropertiesView>());
+
+            var region = _regionManager.Regions[RegionNames.ToolbarRegion];
         }
     }
 }
