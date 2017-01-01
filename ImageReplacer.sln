@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcessing", "Business
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageFileSelection", "Modules\ImageFileSelection\ImageFileSelection.csproj", "{ADD15406-A78B-41C8-85E1-9F7666937DA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceLibrary", "ResourceLibrary\ResourceLibrary.csproj", "{56295E31-A40B-476A-860E-254D5B747372}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{ADD15406-A78B-41C8-85E1-9F7666937DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADD15406-A78B-41C8-85E1-9F7666937DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADD15406-A78B-41C8-85E1-9F7666937DA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56295E31-A40B-476A-860E-254D5B747372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56295E31-A40B-476A-860E-254D5B747372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56295E31-A40B-476A-860E-254D5B747372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56295E31-A40B-476A-860E-254D5B747372}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

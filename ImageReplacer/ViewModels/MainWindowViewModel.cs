@@ -2,7 +2,11 @@
 
 namespace ImageReplacer.ViewModels
 {
-    public class MainWindowViewModel : BindableBase
+    using System.Windows;
+
+    using ImageReplacer.Infrastructure;
+
+    public class MainWindowViewModel : BindableBase, IMainWindowViewModel
     {
         private string _title = "Image Replacer";
         public string Title
@@ -15,5 +19,10 @@ namespace ImageReplacer.ViewModels
         {
 
         }
+    }
+
+    public interface IMainWindowViewModel : IViewModel
+    {
+        string Title { get; set; }
     }
 }
