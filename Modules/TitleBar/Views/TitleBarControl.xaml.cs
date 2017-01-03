@@ -142,6 +142,11 @@
                 DataContext = value;
             }
         }
+
+        private void ContextMenuButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.ContextMenuButton.ContextMenu.IsOpen = true;
+        }
     }
 
     public interface ITitleBarView : IView

@@ -15,6 +15,8 @@
         public MainWindow()
         {
             InitializeComponent();
+            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+            this.MaxWidth = SystemParameters.MaximizedPrimaryScreenWidth;
         }
 
         //private void CommandBinding_Executed_Close(object sender, ExecutedRoutedEventArgs e)

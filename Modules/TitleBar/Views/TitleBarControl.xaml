@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:TitleBar.Views"
              mc:Ignorable="d" 
              Loaded="TitleBar_OnLoaded"
+             Background="Aquamarine"
              >
     <UserControl.Resources>
         <Style x:Key="TitleBarIconButtons">
@@ -17,6 +18,9 @@
             <Setter Property="Button.BorderThickness" Value="0" />
             <Setter Property="Button.Background" Value="LightGray" />
         </Style>
+        <Style x:Key="TitleBarIconImage">
+            <Setter Property="Image.Source" Value="pack://application:,,,/ResourceLibrary;component/images/image-8x.png" />
+        </Style>
     </UserControl.Resources>
     <UserControl.CommandBindings>
         <CommandBinding Command="{x:Static SystemCommands.CloseWindowCommand}" CanExecute="CommandBinding_CanExecute_Close" Executed="CommandBinding_Executed_Close" />
@@ -25,7 +29,24 @@
         <CommandBinding Command="{x:Static SystemCommands.MinimizeWindowCommand}" CanExecute="CommandBinding_CanExecute_Minimize" Executed="CommandBinding_Executed_Minimize" />
     </UserControl.CommandBindings>
     <ContentControl Name="TitlePanel">
-        <DockPanel Background="LightGray">
+        <DockPanel>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center">
+                <Button Name="ContextMenuButton" Click="ContextMenuButton_OnClick" Height="16" Width="16" Margin="10,0,0,0">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Style="{StaticResource TitleBarIconImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Button.ContextMenu>
+                        <ContextMenu>
+                            <!-- DO WHATEVER -->
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
+                <TextBlock Text="Image Replacer" Margin="8,0,0,0">
+                    
+                </TextBlock>
+            </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Top" Margin="4,8,4,4" >
                 <Button Style="{StaticResource TitleBarIconButtons}" Command="{x:Static SystemCommands.MinimizeWindowCommand}" Content="&#62324;" />
                 <Button Name="BtnMaximize" Style="{StaticResource TitleBarIconButtons}" Command="{x:Static SystemCommands.MaximizeWindowCommand}" Content="&#61858;" />
