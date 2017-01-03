@@ -11,40 +11,30 @@
         AllowsTransparency="True" Background="Transparent"
         ResizeMode="CanResizeWithGrip"
         WindowStyle="None"
-        WindowStartupLocation="CenterScreen" 
-        SizeChanged="MainWindow_OnSizeChanged"
-        >
+        WindowStartupLocation="CenterScreen" >
     <Window.Resources>
-        <Style x:Key="TitleBarIconButtons">
-            <Setter Property="Button.FontFamily" Value="/ResourceLibrary;component/Fonts/#Material Design Icons" />
-            <Setter Property="Button.FontSize" Value="16" />
-            <Setter Property="Button.Padding" Value="12,4,12,4"/>
-            <Setter Property="Button.BorderBrush" Value="Transparent" />
-            <Setter Property="Button.BorderThickness" Value="0" />
-            <Setter Property="Button.Background" Value="LightGray" />
-            <Setter Property="Button.FontWeight" Value="Regular" />
-        </Style>
-        
+        <helpers:WidthAndHeightToRectConverter x:Key="WidthAndHeightToRectConverter"/>
     </Window.Resources>
-    <Window.CommandBindings>
-        <CommandBinding Command="{x:Static SystemCommands.CloseWindowCommand}" CanExecute="CommandBinding_CanExecute_Close" Executed="CommandBinding_Executed_Close" />
-        <CommandBinding Command="{x:Static SystemCommands.RestoreWindowCommand}" CanExecute="CommandBinding_CanExecute_Restore" Executed="CommandBinding_Executed_Restore" />
-        <CommandBinding Command="{x:Static SystemCommands.MaximizeWindowCommand}" CanExecute="CommandBinding_CanExecute_Maximise" Executed="CommandBinding_Executed_Maximise" />
-        <CommandBinding Command="{x:Static SystemCommands.MinimizeWindowCommand}" CanExecute="CommandBinding_CanExecute_Minimize" Executed="CommandBinding_Executed_Minimize" />
-    </Window.CommandBindings>
-    <DockPanel>
-        <DockPanel Name="TitlePanel" Background="LightGray" DockPanel.Dock="Top">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Top" Margin="4,8,4,4" >
-                <Button Style="{StaticResource TitleBarIconButtons}" Command="{x:Static SystemCommands.MinimizeWindowCommand}" Content="&#62324;" />
-                <Button Name="BtnMaximize" Style="{StaticResource TitleBarIconButtons}" Command="{x:Static SystemCommands.MaximizeWindowCommand}" Content="&#61858;" />
-                <Button Name="BtnRestore" Style="{StaticResource TitleBarIconButtons}" Command="{x:Static SystemCommands.RestoreWindowCommand}" Content="&#62898;" />
-                <Button Style="{StaticResource TitleBarIconButtons}" Command="{x:Static SystemCommands.CloseWindowCommand}" Content="&#61782;" />
-            </StackPanel>
+    <Border Name="mask" Background="White" CornerRadius="6">
+        <Border.Clip>
+            <RectangleGeometry
+            RadiusX="{Binding CornerRadius.TopLeft, RelativeSource={RelativeSource AncestorType={x:Type Border}}}"
+            RadiusY="{Binding RadiusX, RelativeSource={RelativeSource Self}}">
+                <RectangleGeometry.Rect>
+                    <MultiBinding Converter="{StaticResource WidthAndHeightToRectConverter}" >
+                        <Binding Path="ActualWidth" RelativeSource="{RelativeSource AncestorType={x:Type Border}}" />
+                        <Binding Path="ActualHeight" RelativeSource="{RelativeSource AncestorType={x:Type Border}}" />
+                    </MultiBinding>
+                </RectangleGeometry.Rect>
+            </RectangleGeometry>
+        </Border.Clip>
+        <DockPanel Background="LightGray">
+            <ContentControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.TitleBarRegion}" DockPanel.Dock="Top" />
+            <ContentControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.ToolbarRegion}" DockPanel.Dock="Top" />
+            <DockPanel DockPanel.Dock="Bottom">
+                <ContentControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.PropertiesRegion}" DockPanel.Dock="Right" />
+                <ContentControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.ContentRegion}" DockPanel.Dock="Left" />
+            </DockPanel>
         </DockPanel>
-        <ContentControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.ToolbarRegion}" DockPanel.Dock="Top" />
-        <DockPanel DockPanel.Dock="Bottom">
-            <ContentControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.PropertiesRegion}" DockPanel.Dock="Right" />
-            <ContentControl prism:RegionManager.RegionName="{x:Static inf:RegionNames.ContentRegion}" DockPanel.Dock="Left" />
-        </DockPanel>
-    </DockPanel>
+    </Border>
 </Window>

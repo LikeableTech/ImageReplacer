@@ -27,6 +27,7 @@ namespace ImageReplacer
             var catalog = new ModuleCatalog();
             this.AddModuleTypeToCatalog(typeof(ImageFileSelection.Module), catalog);
             this.AddModuleTypeToCatalog(typeof(ReplacementImage.Module), catalog);
+            this.AddModuleTypeToCatalog(typeof(TitleBar.Module), catalog);
             return catalog;
         }
 

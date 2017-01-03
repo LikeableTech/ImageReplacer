@@ -1,9 +1,9 @@
-﻿using Prism.Modularity;
-using Prism.Regions;
-using System;
-
-namespace ReplacementImage
+﻿namespace ReplacementImage
 {
+    using Prism.Modularity;
+    using Prism.Regions;
+    using System;
+
     /// <summary>
     /// ReplacementImage module that contains the views for configuring the image that will replace the selected source images.
     /// </summary>

@@ -1,13 +1,11 @@
-﻿using Microsoft.Practices.Unity;
-using Prism.Modularity;
-using Prism.Regions;
-using System;
-
-namespace ImageFileSelection
+﻿namespace ImageFileSelection
 {
-    using ImageFileSelection.ViewModels;
-    using ImageFileSelection.Views;
-
+    using Microsoft.Practices.Unity;
+    using Prism.Modularity;
+    using Prism.Regions;
+    using System;
+    using ViewModels;
+    using Views;
     using ImageReplacer.Infrastructure;
 
     public class Module : IModule

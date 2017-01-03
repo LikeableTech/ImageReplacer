@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageFileSelection", "Modul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceLibrary", "ResourceLibrary\ResourceLibrary.csproj", "{56295E31-A40B-476A-860E-254D5B747372}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TitleBar", "Modules\TitleBar\TitleBar.csproj", "{D8D4B604-89A6-4855-8C3D-792437E86BE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{56295E31-A40B-476A-860E-254D5B747372}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56295E31-A40B-476A-860E-254D5B747372}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56295E31-A40B-476A-860E-254D5B747372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D4B604-89A6-4855-8C3D-792437E86BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D4B604-89A6-4855-8C3D-792437E86BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D4B604-89A6-4855-8C3D-792437E86BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D4B604-89A6-4855-8C3D-792437E86BE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,5 +63,6 @@ Global
 		{70AF1445-D789-4E33-81F2-979AACD96A00} = {9ADDBDE4-8FD9-4BDD-8B7B-203662A4D01F}
 		{71DFD0DF-41E0-40EA-A14F-65785AD8D405} = {7408DF8C-497E-42D2-B836-A19B0DEBA2A9}
 		{ADD15406-A78B-41C8-85E1-9F7666937DA7} = {9ADDBDE4-8FD9-4BDD-8B7B-203662A4D01F}
+		{D8D4B604-89A6-4855-8C3D-792437E86BE7} = {9ADDBDE4-8FD9-4BDD-8B7B-203662A4D01F}
 	EndGlobalSection
 EndGlobal

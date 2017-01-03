@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ImageReplacer.Infrastructure
+﻿namespace ImageReplacer.Infrastructure
 {
     public static class RegionNames
     {
+        public static string TitleBarRegion = "TitleBarRegion";
         public static string ToolbarRegion = "ToolbarRegion";
         public static string ContentRegion = "ContentRegion";
         public static string PropertiesRegion = "PropertiesRegion";

@@ -95,10 +95,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Views\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -151,6 +147,10 @@
       <Project>{add15406-a78b-41c8-85e1-9f7666937da7}</Project>
       <Name>ImageFileSelection</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Modules\TitleBar\TitleBar.csproj">
+      <Project>{d8d4b604-89a6-4855-8c3d-792437e86be7}</Project>
+      <Name>TitleBar</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ResourceLibrary\ResourceLibrary.csproj">
       <Project>{56295e31-a40b-476a-860e-254d5b747372}</Project>
       <Name>ResourceLibrary</Name>
@@ -158,6 +158,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagereplacer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
