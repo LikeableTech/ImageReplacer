@@ -21,6 +21,18 @@
         <Style x:Key="TitleBarIconImage">
             <Setter Property="Image.Source" Value="pack://application:,,,/ResourceLibrary;component/images/image-8x.png" />
         </Style>
+        <Style x:Key="SystemMenuIconImageRestoreWindow">
+            <Setter Property="Image.Source" Value="pack://application:,,,/ResourceLibrary;component/images/restore-window.png" />
+        </Style>
+        <Style x:Key="SystemMenuIconImageMaximizeWindow">
+            <Setter Property="Image.Source" Value="pack://application:,,,/ResourceLibrary;component/images/maximize-window.png" />
+        </Style>
+        <Style x:Key="SystemMenuIconImageMinimizeWindow">
+            <Setter Property="Image.Source" Value="pack://application:,,,/ResourceLibrary;component/images/minimize-window.png" />
+        </Style>
+        <Style x:Key="SystemMenuIconImageCloseWindow">
+            <Setter Property="Image.Source" Value="pack://application:,,,/ResourceLibrary;component/images/close-window.png" />
+        </Style>
     </UserControl.Resources>
     <UserControl.CommandBindings>
         <CommandBinding Command="{x:Static SystemCommands.CloseWindowCommand}" CanExecute="CommandBinding_CanExecute_Close" Executed="CommandBinding_Executed_Close" />
@@ -39,7 +51,26 @@
                     </Button.Template>
                     <Button.ContextMenu>
                         <ContextMenu>
-                            <!-- DO WHATEVER -->
+                            <MenuItem Command="{x:Static SystemCommands.RestoreWindowCommand}" Header="Restore" >
+                                <MenuItem.Icon>
+                                    <Image Style="{StaticResource SystemMenuIconImageRestoreWindow}" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Command="{x:Static SystemCommands.MinimizeWindowCommand}" Header="Minimize" >
+                                <MenuItem.Icon>
+                                    <Image Style="{StaticResource SystemMenuIconImageMinimizeWindow}" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Command="{x:Static SystemCommands.MaximizeWindowCommand}" Header="Maximize">
+                                <MenuItem.Icon>
+                                    <Image Style="{StaticResource SystemMenuIconImageMaximizeWindow}" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Command="{x:Static SystemCommands.CloseWindowCommand}" Header="Close" >
+                                <MenuItem.Icon>
+                                    <Image Style="{StaticResource SystemMenuIconImageCloseWindow}" />
+                                </MenuItem.Icon>
+                            </MenuItem>
                         </ContextMenu>
                     </Button.ContextMenu>
                 </Button>
