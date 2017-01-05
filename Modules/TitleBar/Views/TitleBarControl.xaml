@@ -66,6 +66,7 @@
                                     <Image Style="{StaticResource SystemMenuIconImageMaximizeWindow}" />
                                 </MenuItem.Icon>
                             </MenuItem>
+                            <Separator />
                             <MenuItem Command="{x:Static SystemCommands.CloseWindowCommand}" Header="Close" >
                                 <MenuItem.Icon>
                                     <Image Style="{StaticResource SystemMenuIconImageCloseWindow}" />
